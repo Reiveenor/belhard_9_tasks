@@ -3,3 +3,14 @@
 с учетом, что в начале могут быть пробелы, в конце могут быть пробелы, между слов
 может встречаться больше одного пробела подряд.
 """
+import re
+
+
+def count_words(text: str):
+    pattern = r"\w+"
+    result = re.findall(pattern, text)
+    print(len(result))
+
+
+if __name__ == '__main__':
+    count_words(" первым идет пробел  потом два пробела и в конце тоже  пробел ")
